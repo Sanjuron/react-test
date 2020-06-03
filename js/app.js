@@ -6,39 +6,27 @@ class App extends React.Component {
 
     }
 
-    handleClick = e => {
-        // console.log(e.target);
-        this.setState(
-            {
-                name: prompt("entre ton nom:"),
-                age: prompt("entre ton age:")
-            }
-        )
-        console.log(this.state);}
-    
+    handleChange = e => {
+        this.setState({
+            name: e.target.value,
 
-    handleMouseOver = e => {
-        console.log(e.target, e.pageX);
+        });
     }
 
-    handleCopy = e => {
-        alert("Try being original, for once");
-    }
-
-    handlePaste = e => {
-        alert("qu'est ce que t'essaies de faire malheureux!")
-        e.preventDefault;
+    handleSubmit = e => {
+        e.preventDefault();
+        console.log(this.state.name);
     }
 
      render() {
          return (
             <div className="app-content"> 
-                <h1>Hey, Ninjas</h1>
-                <p>Je m'appelle {this.state.name} et j'ai {this.state.age} ans</p>
-                <button onClick={this.handleClick}>Clique-moi</button>
-                <button onMouseOver={this.handleMouseOver}>Hover me</button>
-                <p onCopy={this.handleCopy}>What we think we become</p>
-                <input type="text" onPaste={this.handlePaste}/>
+                <h1>Hey, {this.state.name}</h1>
+                <form onSubmit={this.handleSubmit}>
+                    <input type="text" onChange={this.handleChange}/>
+                    <button>Submit</button>
+                </form>
+                
             </div>
          )
      }
