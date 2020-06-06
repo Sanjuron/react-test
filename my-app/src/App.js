@@ -4,12 +4,15 @@ import Ninjas from "./Ninjas";
 
 function App() {
   return (
-    <div className="App">
+        <div className="App">
      <h1>My first React app</h1>
      <p>Bienvenue!</p>
-     <Ninjas/>
+     <Ninjas name="Sanjuron" age="30" belt="black"/>
+     <Ninjas name="Dovakhin" age="10000" belt="ultrablack"/>
+
     </div>
   );
 }
+
 
 export default App;

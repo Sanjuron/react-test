@@ -1,14 +1,16 @@
 import React from 'react';
 
-function Ninjas() {
+function Ninjas(props) {
+    console.log(props);
+    const { name, age, belt} = props;
         return(
             <div className="ninja">
-                <div>Name: Sanjuron</div>
-                <div>Age: 30</div>
-                <div>Belt: Yellow</div>
+                <div>Name: {name}</div>
+                <div>Age: {age}</div>
+                <div>Belt: {belt}</div>
             </div>
         )
     
 }
-
 export default Ninjas
+
