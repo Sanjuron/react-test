@@ -1,6 +1,6 @@
 import React from 'react';
 import Ninjas from "./Ninjas";
-import './App.css';
+// import './App.css';
 
 function App() {
   return (

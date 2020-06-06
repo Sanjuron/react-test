@@ -1,7 +1,6 @@
 import React from 'react';
 
-class Ninjas extend Component {
-    render(){
+function Ninjas() {
         return(
             <div className="ninja">
                 <div>Name: Sanjuron</div>
@@ -9,7 +8,7 @@ class Ninjas extend Component {
                 <div>Belt: Yellow</div>
             </div>
         )
-    }
+    
 }
 
 export default Ninjas
