@@ -1,5 +1,6 @@
 import React from 'react';
 import Ninjas from "./Ninjas";
+import AddNinja from "./AddNinja";
 // import './App.css';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
      <h1>My first React app</h1>
      <p>Bienvenue!</p>
      <Ninjas ninjas = {ninjas}/>
+     <AddNinja />
 
     </div>
   );
