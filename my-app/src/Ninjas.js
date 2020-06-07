@@ -1,13 +1,20 @@
 import React from 'react';
 
-function Ninjas(props) {
-    console.log(props);
-    const { name, age, belt} = props;
+function Ninjas(ninjas) {
+    console.log(ninjas);
+    // const { name, age, belt} = props;
+    const ninjaList = ninjas.map(ninja => {
+        return (
+            <div className="ninja" key={ninja.id}>
+            <div>Name: {ninja.name}  </div>
+            <div>Age: {ninja.age} </div>
+            <div>Belt: {ninja.belt} </div>
+        </div>
+        )
+    })
         return(
-            <div className="ninja">
-                <div>Name: {name}</div>
-                <div>Age: {age}</div>
-                <div>Belt: {belt}</div>
+            <div className="ninja-list">
+                { ninjaList }
             </div>
         )
     
