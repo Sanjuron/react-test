@@ -5,7 +5,7 @@ import Ninjas from "./Ninjas";
 function App() {
   const ninjas = [
     { name: "Sanjuron", age: 30, belt: "black", id: 1 },
-    { name: "Dovakhin", age: 4455665, belt: "ultrablack", id: 2 },
+    { name: "Dovakhin", age: 18, belt: "ultrablack", id: 2 },
     { name: "Yojimbo", age: 43, belt: "green", id: 3 }
   ]
 
