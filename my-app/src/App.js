@@ -19,15 +19,23 @@ class  App extends Component {
       ninjas: ninjas
     })
   }
+  deleteNinja = (id) => {
+    let ninjas = this.state.ninjas.filter(ninjas =>{
+      return ninja.id !== id
+    }
+      ); // filter est une méthode non destructrice
+  
+  this.setState({
+    ninjas: ninjas
+  })
 
   render(){
   return (
         <div className="App">
      <h1>My first React app</h1>
      <p>Bienvenue!</p>
-     <Ninjas ninjas = {this.state.ninjas}/>
+     <Ninjas deleteNinja={this.deleteNinja} ninjas = {this.state.ninjas}/>
      <AddNinja  addNinja={this.addNinja}/>
-
     </div>
   );
 }
